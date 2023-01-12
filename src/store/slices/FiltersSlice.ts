@@ -20,6 +20,9 @@ export const FiltersSlice = createSlice({
         ...s.filter,
         ...action.payload,
       };
+      if (!("page" in action.payload) && !("sortBy" in action.payload)) {
+        s.filter.page = 1;
+      }
     },
   },
 });

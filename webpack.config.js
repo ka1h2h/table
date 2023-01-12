@@ -26,6 +26,9 @@ module.exports = {
     port: 3033,
     hot: true,
     historyApiFallback: true,
+    client: {
+      overlay: false,
+    },
   },
   stats: {
     errorDetails: true,
