@@ -3,9 +3,10 @@ import { selectFiltratedUsers } from "../store/selectors";
 
 export const Tbody = () => {
   const allUsers = useAppSelector(selectFiltratedUsers);
+
   return (
     <tbody>
-      {allUsers.map((i) => {
+      {allUsers.users.map((i) => {
         return (
           <tr>
             <td>
@@ -17,7 +18,7 @@ export const Tbody = () => {
             </td>
             <td>{i.gender}</td>
             <td>{i.country}</td>
-            <td>{i.dob}</td>
+            <td>{i.dob.toLocaleDateString("en-Gb")}</td>
             <td>{i.email}</td>
             <td>{i.phone}</td>
           </tr>

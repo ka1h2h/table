@@ -1,4 +1,4 @@
-import { UsersAPI } from "./classes";
+import { UsersAPI } from "../api";
 import { createSlice } from "@reduxjs/toolkit";
 
 export const UsersSlice = createSlice({

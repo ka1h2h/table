@@ -1,4 +1,4 @@
-import { UrlService } from "./classes";
+import { UrlService } from "../services";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface IFilter {
@@ -6,6 +6,7 @@ export interface IFilter {
   sex?: string;
   country?: string;
   page?: number;
+  sortBy?: string;
 }
 
 export const FiltersSlice = createSlice({
@@ -20,10 +21,7 @@ export const FiltersSlice = createSlice({
         ...action.payload,
       };
     },
-    currentPage: (s, action) => {
-      s.filter.page = action.payload;
-    },
   },
 });
 
-export const { setFilter, currentPage } = FiltersSlice.actions;
+export const { setFilter } = FiltersSlice.actions;

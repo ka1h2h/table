@@ -16,7 +16,9 @@
 :active {
   outline: none;
 }
-
+a {
+  cursor: pointer;
+}
 a:focus,
 a:active {
   outline: none;
@@ -53,6 +55,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  background-color: transparent;
 }
 
 button::-moz-focus-inner {
@@ -98,4 +101,25 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.sortedByName {
+  background-color: yellow;
+  margin-left: 15px;
+}
+
+button .sortedByDate {
+  margin-left: 15px;
+}
+.sortedByDate {
+  background-color: yellow;
+  margin-left: 15px;
+}
+
+.currentPage {
+  color: rgb(54, 191, 255);
+}
+.pagination-btn {
+  text-decoration: none;
+  margin: 15px;
 }
